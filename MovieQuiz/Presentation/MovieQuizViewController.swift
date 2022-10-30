@@ -96,12 +96,6 @@ final class MovieQuizViewController: UIViewController {
         textLabel.text = step.question
         counterLabel.text = step.questionNumber
     }
-
-    private func showFirstQuestion () {
-        let firstQuestion = questions[currentQuestionIndex]
-        let viewModel = convert(model: firstQuestion)
-        show(quiz: viewModel)
-    }
     
     private func show(quiz result: QuizResultsViewModel) {
         let alert = UIAlertController(
