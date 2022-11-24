@@ -110,10 +110,12 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
                 let bestGame = statisticService.bestGame
                 let date = bestGame.date
                 
-                let text = "Ваш результат: \(correctAnswers)/\(questionsAmount)\n" +
-                           "Количество сыгранных квизов: \(statisticService.gamesCount)\n" +
-                           "Рекорд: \(bestGame.correct)/\(bestGame.total) (\(date.dateTimeString))\n" +
-                           "Средняя точность: \(String(format: "%.2f", statisticService.totalAccuracy))%"
+                let text = """
+                      Ваш результат: \(correctAnswers)/\(questionsAmount)
+                      Количество сыгранных квизов: \(statisticService.gamesCount)
+                      Рекорд: \(bestGame.correct)/\(bestGame.total) (\(date.dateTimeString))
+                      Средняя точность: \(String(format: "%.2f", statisticService.totalAccuracy))%
+                    """
                 let viewModel = QuizResultsViewModel(
                     title: "Этот раунд окончен!",
                     text: text,
