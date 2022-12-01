@@ -35,7 +35,6 @@ struct MoviesLoader: MoviesLoading {
                 
             case .failure(_):
                 handler(.failure(LoadingError.noDataError))
-                return
             }
         }
     }

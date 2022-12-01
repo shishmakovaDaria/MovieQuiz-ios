@@ -26,6 +26,9 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         alertPresenter = AlertPresenter(viewController: self)
         statisticService = StatisticServiceImplementation()
         
+        activityIndicator.isHidden = true
+        activityIndicator.hidesWhenStopped = true
+        
         questionFactory?.loadData()
         showLoadingIndicator()
     }
@@ -44,7 +47,7 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     }
     
     func didLoadDataFromServer() {
-        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
         questionFactory?.requestNextQuestion()
     }
     
@@ -79,12 +82,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
         let alert = AlertModel(title: result.title, message: result.text, buttonText: result.buttonText, completion: {[weak self] in
             guard let self = self else { return }
             self.currentQuestionIndex = 0
-            
-            // скидываем счётчик правильных ответов
-            self.correctAnswers = 0
-            
-            // заново показываем первый вопрос
-            self.questionFactory?.requestNextQuestion()
+            self.correctAnswers = 0 // скидываем счётчик правильных ответов
+            self.questionFactory?.requestNextQuestion()  // заново показываем первый вопрос
         })
         
         alertPresenter?.present(model: alert)
@@ -141,13 +140,10 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate {
     }
     
     private func showLoadingIndicator() {
-        activityIndicator.isHidden = false
         activityIndicator.startAnimating()
     }
     
     private func showNetworkError(message: String) {
-        activityIndicator.isHidden = true // hideLoadingIndicator()
-        
         let alert = AlertModel(title: "Ошибка", message: message, buttonText: "Попробовать еще раз", completion: {[weak self] in
             guard let self = self else { return }
             // self.presenter.restartGame()
