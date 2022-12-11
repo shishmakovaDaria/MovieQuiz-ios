@@ -12,7 +12,11 @@ struct MoviesLoader: MoviesLoading {
     }
     
     // MARK: - NetworkClient
-    private let netWorkClient = NetworkClient()
+    private let netWorkClient: NetworkRouting
+    
+    init(netWorkClient: NetworkRouting = NetworkClient()) {
+        self.netWorkClient = netWorkClient
+    }
     
     // MARK: - URL
     private var mostPopularMoviesUrl: URL {
