@@ -18,7 +18,7 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
         alertPresenter = AlertPresenter(viewController: self)
         presenter = MovieQuizPresenter(viewController: self)
         
-        // activityIndicator.hidesWhenStopped = true
+        activityIndicator.hidesWhenStopped = true
     }
     
     // MARK: - Private functions
@@ -60,12 +60,11 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     }
     
     func showLoadingIndicator() {
-        activityIndicator.isHidden = false
         activityIndicator.startAnimating()
     }
     
     func hideLoadingIndicator() {
-        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
     }
     
     func showNetworkError(message: String) {
