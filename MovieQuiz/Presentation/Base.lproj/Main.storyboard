@@ -63,8 +63,8 @@
                                         <rect key="frame" x="0.0" y="624.5" width="374" height="99.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Рейтинг этого фильма меньше, чем 5?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="wJR-MB-QFU" userLabel="Question Label">
-                                                <rect key="frame" x="42" y="13" width="245.5" height="73.5"/>
-                                                <fontDescription key="fontDescription" name="YSDisplay-Bold" family="YS Display" pointSize="23"/>
+                                                <rect key="frame" x="42" y="13" width="234.5" height="73.5"/>
+                                                <fontDescription key="fontDescription" name="YSDisplay-Bold" family="YS Display" pointSize="22"/>
                                                 <color key="textColor" name="YP White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -73,7 +73,7 @@
                                             <constraint firstItem="wJR-MB-QFU" firstAttribute="top" secondItem="qIe-gS-SvZ" secondAttribute="top" constant="13" id="2b5-ZB-hKk"/>
                                             <constraint firstItem="wJR-MB-QFU" firstAttribute="leading" secondItem="qIe-gS-SvZ" secondAttribute="leading" constant="42" id="4pm-TG-lY6"/>
                                             <constraint firstAttribute="bottom" secondItem="wJR-MB-QFU" secondAttribute="bottom" constant="13" id="IfI-ih-R2I"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wJR-MB-QFU" secondAttribute="trailing" symbolic="YES" id="L3S-7K-x5b"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wJR-MB-QFU" secondAttribute="trailing" constant="20" symbolic="YES" id="L3S-7K-x5b"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V0Q-hS-ik0">
