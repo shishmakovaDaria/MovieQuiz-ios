@@ -2,6 +2,10 @@
 
 MovieQuiz - это приложение с квизами о фильмах из топ-250 рейтинга и самых популярных фильмах по версии IMDb.
 
+<img src="https://github.com/shishmakovaDaria/Tracker/assets/114743567/612b65bd-a3bb-4d95-9e84-e0d2fbfc832d" width="200">
+<img src="https://github.com/shishmakovaDaria/Tracker/assets/114743567/8d2eec7c-ea30-4bed-b2e9-ba8ffcbfd60c" width="200">
+<img src="https://github.com/shishmakovaDaria/Tracker/assets/114743567/f64d9abb-c81c-43d4-a083-f361ed70f6ab" width="200">
+
 ## **Ссылки**
 
 [Макет Figma](https://www.figma.com/file/l0IMG3Eys35fUrbvArtwsR/YP-Quiz?node-id=34%3A243)
