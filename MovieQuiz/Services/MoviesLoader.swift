@@ -20,7 +20,9 @@ struct MoviesLoader: MoviesLoading {
     
     // MARK: - URL
     private var mostPopularMoviesUrl: URL {
-        guard let url = URL(string: "https://imdb-api.com/en/API/Top250Movies/***") else { // вместо звездочек необходимо вставить ключ API
+        let APIKey = "*****" // вместо звездочек необходимо вставить ключ API
+        
+        guard let url = URL(string: "https://imdb-api.com/en/API/Top250Movies/\(APIKey)") else {
             preconditionFailure("Unable to construct mostPopularMoviesUrl")
         }
         return url
