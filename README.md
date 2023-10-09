@@ -20,8 +20,9 @@ MovieQuiz - это приложение с квизами о фильмах из
 - Сейчас API платное, для полноценного запуска требуется API Key (необходимо вставить в файл MoviesLoader).
 
 ## **Стек технологий**
-- MVP
+- Swift
 - UIKit
+- MVP
 - Storyboard
 - UserDefaults
 - REST API
